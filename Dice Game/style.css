@@ -1,0 +1,30 @@
+h1, h2{
+    color: blueviolet;
+}
+ol{
+    color: gray;
+}
+.roll{
+    background-color: blueviolet;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    padding-inline: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.diceSide{
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+#six{
+    background-color: red;
+}
+#result{
+    color: blueviolet;
+}

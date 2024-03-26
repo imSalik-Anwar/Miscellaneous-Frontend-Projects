@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sign up</title>
+</head>
+<body>
+    <fieldset>
+        <legend><h1>Sign up</h1></legend>
+        <form>
+            <label for="first-name">First name: </label>
+            <input type="text" name="first-name" id="first-name" placeholder="John"> <br>
+            <label for="last-name">Last name: </label>
+            <input type="text" name="last-name" id="last-name" placeholder="Wick"> <br>
+            <label for="email">Email id:&nbsp; &nbsp;</label>
+            <input type="email" name="email" id="email" placeholder="johnwick@hightable.com"> <br>
+            <label for="contact">Contact:&nbsp; &nbsp;&nbsp; </label>
+            <input type="tel" name="contact" id="contact" placeholder="Mobile number"> <br>
+
+            <button id="reset" type="reset">Reset form</button>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </fieldset>
+    
+    <fieldset id="details">
+        <legend><h3>Your submission details :</h3></legend>
+        <p></p>
+    </fieldset>
+    <script src="./signup-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #ccc;
+}
+#container{
+    width: 80%;
+    min-height: 500px;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-image: url("https://cdn.pixabay.com/photo/2019/04/10/11/56/watercolor-4116932_1280.png");
+    box-shadow: 0px 0px 20px gray;
+}
+h1{
+    text-align: center;
+    color: slateblue;
+    text-decoration: underline;
+}
+span{
+    color: rgba(105, 90, 205, 0.836);
+}
+p{
+    text-align: center;
+    margin-top: -15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: slateblue;
+}
+#columns{
+    display: flex;
+    justify-content: space-around;
+}
+.column{
+    width: 30%;
+    min-height: 400px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.column:hover{
+    box-shadow: 0px 0px 5px gray;
+}
+#to-do-heading{
+    color: rgb(168, 168, 20);
+}
+#in-progress-heading{
+    color: green;
+}
+#com-heading{
+    color: rgb(87, 83, 83);
+}
+#to-do-heading, #in-progress-heading, #com-heading{
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+.add-task-btn{
+    border: none;
+    background-color: slateblue;
+    color: white;
+    font-style: italic;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    padding-inline: 30px;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px rgb(168, 168, 20);
+}
+.task-holder{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-inline: 10px;
+    margin-top: 5px;
+}
+.task{
+    width: 70%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    margin-right: 5px;
+    text-align: left;
+    padding-bottom: 5px;
+}
+.status{
+    width: 30%;
+    height: 20px;
+}
+#delete{
+    color: red;
+    font-style: italic;
+}

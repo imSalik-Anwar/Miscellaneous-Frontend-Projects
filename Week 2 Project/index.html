@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="current-image-container">
+        <h1 id="picture-on">NASA Picture of the day</h1>
+        <div id="content">
+            <div id="image"></div>
+            <div id="description">
+                <h3 id="title">NASA</h3>
+                <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, cupiditate maxime soluta porro sint sunt atque minus voluptates incidunt totam, alias perferendis ipsam exercitationem, rem corporis obcaecati animi ullam officiis vel dolor eum quibusdaest provident maiores, quaerat vitae? Ad, nobis? Nesciunt cumque ipsum labore asperiores perferendis accusantium?</p>
+            </div>
+        </div>
+    </div>
+
+    <p id="disclaimer">Disclaimer: Do not select current or future date.</p>
+
+    <div id="container-2">
+        <form id="search-form">
+            <label for="search-input">Select a date: </label>
+            <input type="date" name="calender" id="search-input">
+            <button>Search image</button>
+        </form>
+
+    
+        <div id="history">
+            <h4>Previous searches</h4>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

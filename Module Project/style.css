@@ -1,0 +1,123 @@
+body{
+    background-color: rgb(46, 46, 46);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#container{
+    max-width: 400px;
+    min-height: 260px;
+    background-color: aliceblue;
+    margin: auto;
+    margin-top: 200px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-top: 20px;
+    position: relative;
+}
+#box1{
+    background-color: black;
+    color: gray;
+    height: 25px;
+    display: flex;
+    align-items: last baseline;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+#box2{
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+#group1{
+    position: absolute;
+    left: 30px;
+    top: 25px;
+    width: 90%;
+}
+#group2{
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    width: 90%;
+    margin-top: 20px;
+}
+label{
+    font-size: 13px;
+    font-weight: 600;
+}
+input{
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+#btn{
+    position: absolute;
+    left: 30px;
+    top: 190px;
+    padding-inline: 40px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+.warning-tag{
+    color: red;
+    margin-top: 2px;
+    font-size: 10px;
+}
+.success-message{
+    color: green;
+    font-size: 11px;
+    margin-top: 18px;
+}
+#confirmation-box{
+    width: 300px;
+    height: 150px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 20px black;
+    position: relative;
+    margin: auto;
+    top: -200px;
+    z-index: 2;
+}
+#confirmation-box>p{
+    margin-top: 25px;
+    font-weight: 600;
+}
+#okay{
+    background-color: green;
+    border: none;
+    color: white;
+    padding-inline: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px pink;
+    cursor: pointer;
+}
+#cancel{
+    background-color: tomato;
+    border: none;
+    color: white;
+    padding-inline: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px pink; 
+    cursor: pointer;  
+}
+.hide{
+   visibility: hidden;
+}

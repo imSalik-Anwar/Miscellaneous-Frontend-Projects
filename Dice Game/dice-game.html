@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/gif/png" href="https://cdn.pixabay.com/photo/2017/09/28/23/05/randomized-trial-2797427_1280.png">
+    <title>Dice Game</title>
+    <style>
+        h1, h2{
+            color: blueviolet;
+        }
+        ol{
+            color: gray;
+        }
+        .roll{
+            background-color: blueviolet;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: 600;
+            padding-inline: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            cursor: pointer;
+        }
+        .diceSide{
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        #six{
+            background-color: red;
+        }
+        #result{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend><h1>Dice Game</h1></legend> 
+       <ol>
+            <li>Computer will generate a target score for you.</li>
+            <li>You will get 5 terms to roll the dice.</li>
+            <li>If your total score beats the target score, you win.</li>
+       </ol>
+    </fieldset>
+    <h1 id="result">Get the dice rolling!</h1>
+    <fieldset>
+        <legend><h2>Play Area</h2></legend>
+        <p id="terms"></p>
+        <p id="target"></p>
+        <p id="score"></p>
+        <button class="roll"><i class="fa-solid fa-user"></i>&nbsp;&nbsp; Roll the dice</button>
+        <br><br>
+        <button id="one" class="diceSide"><i class="fa-solid fa-circle-dot"></i></button>
+        <button id="two" class="diceSide"><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i></button>
+        <button id="three" class="diceSide"><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i></button>
+        <button id="four" class="diceSide"><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i></button>
+        <button id="five" class="diceSide"><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i></button>
+        <button id="six" class="diceSide"><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i><i class="fa-solid fa-circle-dot"></i></button>
+    </fieldset>
+    <script>
+        let roll = document.querySelector('.roll')
+        let tar = document.querySelector('#target')
+        let Score = document.querySelector('#score')
+        let result = document.querySelector(`#result`)
+        let termCount = document.querySelector(`#terms`)
+
+        let diceSides = [1,2,3,4,5,6]
+        let n = diceSides.length
+
+        // add event
+        roll.addEventListener("click", score)
+
+        let playerScore = 0;
+        let terms = 5
+        let target = Math.floor(Math.random() * (23 - 15) + 15);
+        tar.innerHTML = `Target score: ${target}`
+        Score.innerHTML = `Your score: ${playerScore}`
+        termCount.innerHTML = `Terms left: 5`
+        function score(){
+            if(terms > 0){
+                let index = Math.floor(Math.random() * n)
+                let termScore = diceSides[index]
+                playerScore += termScore
+                terms--
+                Score.innerHTML = `Your score: ${playerScore}`
+                termCount.innerHTML = `Trems left: ${terms}`
+                result.innerHTML = `Game in progress...`
+                changeColor(termScore)
+                if(playerScore > target || terms == 0){
+                    printResult()
+                } 
+            } else {
+                 printResult()    
+            }
+        }
+        function printResult(){
+            if(playerScore > target){
+                result.innerHTML = `Hurrah, you won!! :)`
+                document.getElementById("result").style.color = "green"
+            } else if(playerScore < target){
+                result.innerHTML = `Alas, you lost! :(`
+                document.getElementById("result").style.color = "red"
+            } else {
+                result.innerHTML = `Nah, It's a tie :|`
+                document.getElementById("result").style.color = "gray"
+            } 
+        }
+        function changeColor(termScore){
+            if(termScore == 1){
+                document.getElementById("one").style.color = "yellow"
+            } else if(termScore == 2){
+                document.getElementById("two").style.color = "yellow"
+            } else if(termScore == 3){
+                document.getElementById("three").style.color = "yellow"
+            } else if(termScore == 4){
+                document.getElementById("four").style.color = "yellow"
+            } else if(termScore == 5){
+                document.getElementById("five").style.color = "yellow"
+            } else if(termScore == 6){
+                document.getElementById("six").style.color = "yellow"
+            }
+
+        }
+    </script>
+</body>
+</html>

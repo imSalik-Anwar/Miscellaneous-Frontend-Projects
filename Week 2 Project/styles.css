@@ -1,0 +1,84 @@
+
+#current-image-container{
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    background-color: seagreen;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+#current-image-container>h1{
+    margin-top: 0px;
+}
+#content{
+    display: flex;
+    width: 95%;
+    height: 85%;
+    background-color: #ccc;
+    border: 1px solid black;
+}
+#picture-on{
+    color: white;
+}
+#image{
+    width: 60%;
+    height: 100%;
+    background-image: url("./nasa\ logo.webp");
+    background-size: 100% 100%;
+}
+#description{
+    width: 40%;
+    padding: 20px;
+}
+#description>p{
+    text-align: justify;
+    padding-right: 5px;
+    overflow-y: auto;
+    height: 80%;
+}
+#disclaimer{
+    width: 90%;
+    margin: auto;
+    color: tomato;
+    font-style: italic;
+    font-weight: 600;
+}
+#container-2{
+    display: flex;
+    justify-content: space-between;
+    width: 91%;
+    margin: auto;
+    margin-top: 20px;
+}
+label{
+    font-size: 20px;
+    font-style: italic;
+}
+button{
+    padding-inline: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: seagreen;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    margin-left: 25px;
+}
+#history{
+    width: 40%;
+    background-color: seagreen;
+}
+h4{
+    margin-left: 40px;
+    text-decoration: underline;
+    color: white;
+}
+#history-list{
+    list-style: none;
+}
+li{
+    margin-top: 5px;
+    color: yellow;
+}

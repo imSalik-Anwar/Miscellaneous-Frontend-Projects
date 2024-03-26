@@ -1,0 +1,109 @@
+body{
+    background-color: #ccc;
+    /* position: relative; */
+}
+#score-board{
+    width: 25%;
+    min-height: 50px;
+    background-color: green;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#score{
+    color:  white;
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    width: 25%;
+    margin-left: 120px;
+    margin-top: 12px;
+}
+#game-area{
+    position: relative;
+}
+#road{
+    width: 25%;
+    min-height: 555px;
+    background-color: rgb(81, 78, 97);
+    position: absolute;
+    left: 506px;
+    overflow: hidden;
+}
+#my-car{
+    width: 50px;
+    height: 100px;
+    position: absolute;
+    bottom: 10px;
+    left: 130px;
+    z-index: 2;
+    /* background-image: url("https://static.vecteezy.com/system/resources/previews/026/790/814/original/top-view-red-car-cartoon-concept-cartoon-transport-free-png.png"); */
+    background-image: url("./my-car.webp");
+    background-size: 210% 100%;
+    background-position: center;
+}
+.border{
+    height: 555px;
+    width: 5px;
+    background-color: yellow;
+}
+#border-left{
+    position: absolute;
+    left: 5px;
+    top: 0px;
+}
+#border-right{
+    position: absolute;
+    right: 5px;
+    top: 0px;
+}
+.strip{
+    position: absolute;
+    left: 160px;
+    background-color: white;
+    min-height: 80px;
+    width: 8px;
+}
+#start-screen{
+    width: 30%;
+    min-height: 250px;
+    background-color: slateblue;
+    position: absolute;
+    left: 470px;
+    top: 150px;
+    box-shadow: 0 0 20px white;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+ul{
+    margin-top: 50px;
+    margin-left: 50px;
+    color: white;
+}
+button{
+    margin-top: 30px;
+    margin-left: 140px;
+    background-color: green;
+    color: white;
+    padding-inline: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 5px white;
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+.enemy{
+    position: absolute; 
+    bottom: 100px; 
+    left: 200px;
+    width: 40px; 
+    height: 100px;
+    background-size: 150% 100%;
+    background-position: center;
+    border-radius: 10px;
+}
